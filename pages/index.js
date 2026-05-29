@@ -1,23 +1,27 @@
 import Head from 'next/head'
-import Header from '@components/Header'
+import Navbar from '@components/Navbar'
+import Hero from '@components/Hero'
+import Services from '@components/Services'
+import About from '@components/About'
+import Contact from '@components/Contact'
 import Footer from '@components/Footer'
 
 export default function Home() {
   return (
-    <div className="container">
+    <>
       <Head>
-        <title>Next.js Starter!</title>
+        <title>Socialab | Innovación Social en América Latina</title>
+        <meta name="description" content="Socialab es la plataforma líder en innovación social en LATAM. Aceleramos startups, brindamos consultoría de innovación y construimos comunidad de impacto." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Navbar />
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <Hero />
+        <Services />
+        <About />
+        <Contact />
       </main>
-
       <Footer />
-    </div>
+    </>
   )
 }
