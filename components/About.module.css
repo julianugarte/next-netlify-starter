@@ -1,0 +1,154 @@
+.about {
+  padding: 100px 0;
+  background: white;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.imageWrap {
+  position: relative;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 50%, #C7D2FE 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagePlaceholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(27,79,216,0.15) 0%, transparent 60%);
+}
+
+.floatCard {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--color-border);
+}
+
+.floatIcon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.floatText strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  line-height: 1;
+}
+
+.floatText span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-dark);
+  letter-spacing: -0.02em;
+}
+
+.body {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.value {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: var(--color-bg-subtle);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.valueIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.valueText strong {
+  display: block;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.valueText p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .imageWrap {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .about {
+    padding: 72px 0;
+  }
+
+  .floatCard {
+    right: 0;
+    bottom: -16px;
+  }
+}
