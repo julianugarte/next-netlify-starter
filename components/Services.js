@@ -1,62 +1,58 @@
 import styles from './Services.module.css'
 
-const services = [
-  {
-    icon: '🚀',
-    title: 'Aceleración de Startups',
-    desc: 'Programa intensivo para emprendimientos de impacto social. Acompañamiento, mentoría y acceso a red de inversores que valoran el triple resultado.',
-  },
-  {
-    icon: '🎯',
-    title: 'Consultoría de Innovación',
-    desc: 'Diseñamos estrategias de innovación centradas en el usuario para organizaciones públicas y privadas que buscan generar valor social y económico.',
-  },
-  {
-    icon: '🏫',
-    title: 'Educación y Talleres',
-    desc: 'Programas formativos en Design Thinking, innovación social y emprendimiento. Capacitaciones in-house y certificaciones para equipos de trabajo.',
-  },
-  {
-    icon: '🌐',
-    title: 'Comunidad y Red',
-    desc: 'Conectamos a más de 50.000 innovadores sociales en toda la región. Accede a eventos, colaboraciones y oportunidades exclusivas de nuestra red.',
-  },
-  {
-    icon: '💡',
-    title: 'Desafíos de Innovación',
-    desc: 'Organizamos convocatorias abiertas y retos de co-creación para que los mejores talentos resuelvan problemáticas sociales reales en alianza con corporativos y gobierno.',
-  },
-  {
-    icon: '📊',
-    title: 'Medición de Impacto',
-    desc: 'Desarrollamos marcos de medición y evaluación de impacto social para que tu organización demuestre, comunique y amplíe sus resultados con evidencia.',
-  },
+const objetivos = [
+  { num: '01', text: 'Fortalecer la competitividad de los locatarios Mallplaza' },
+  { num: '02', text: 'Acercar tecnologías y soluciones innovadoras a comercios y operadores' },
+  { num: '03', text: 'Impulsar sostenibilidad y eficiencia dentro del ecosistema' },
+  { num: '04', text: 'Generar nuevas oportunidades de negocio para startups' },
+  { num: '05', text: 'Posicionar a Mallplaza como referente regional en innovación aplicada' },
 ]
 
 export default function Services() {
   return (
-    <section id="servicios" className={styles.services}>
-      <div className="container">
-        <div className={styles.header}>
-          <span className="section-label">Nuestros Servicios</span>
-          <h2 className={styles.title}>Todo lo que necesitas para innovar con impacto</h2>
-          <p className={styles.subtitle}>
-            Ofrecemos una suite completa de servicios diseñados para impulsar la innovación social en organizaciones de todos los tamaños.
-          </p>
-        </div>
-        <div className={styles.grid}>
-          {services.map((s) => (
-            <div key={s.title} className={styles.card}>
-              <div className={styles.iconWrap}>{s.icon}</div>
-              <h3 className={styles.cardTitle}>{s.title}</h3>
-              <p className={styles.cardDesc}>{s.desc}</p>
-              <a href="#contacto" className={styles.cardLink}>
-                Saber más →
-              </a>
+    <>
+      {/* INTRO */}
+      <section className={styles.intro}>
+        <div className={`container ${styles.introGrid}`}>
+          <div>
+            <p className={styles.label}>Resumen ejecutivo</p>
+            <h2 className={styles.title}>De centro comercial<br />a plataforma urbana</h2>
+            <p className={styles.body}>
+              Mallplaza ha evolucionado hacia una plataforma que conecta personas, comercio, servicios, experiencias y comunidad. <strong>Mallplaza Impulsa</strong> es la capa de innovación que transforma esos espacios en lugares donde la tecnología genera valor concreto para locatarios, visitantes y ciudades.
+            </p>
+          </div>
+          <div className={styles.introCard}>
+            <p className={styles.label}>La evolución</p>
+            <div className={styles.evolution}>
+              <div className={styles.evoPill}>Centro comercial</div>
+              <div className={styles.evoArrow}>→</div>
+              <div className={styles.evoPill}>Plataforma urbana</div>
+              <div className={styles.evoArrow}>→</div>
+              <div className={`${styles.evoPill} ${styles.active}`}>Ecosistema de innovación</div>
             </div>
-          ))}
+            <p className={styles.introNote}>
+              Socialab aporta la red de startups, la metodología de innovación abierta y la operación de programas; Mallplaza aporta la escala, los espacios y el acceso a comercio y comunidad.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* OBJETIVOS */}
+      <section className={styles.objetivos} id="objetivos">
+        <div className="container">
+          <p className={styles.label}>Hacia dónde vamos</p>
+          <h2 className={styles.title}>5 objetivos del programa</h2>
+          <p className={styles.body}>Cada acción de Mallplaza Impulsa persigue resultados medibles para el ecosistema completo.</p>
+          <div className={styles.objGrid}>
+            {objetivos.map((o) => (
+              <div key={o.num} className={styles.objCard}>
+                <div className={styles.objNum}>{o.num}</div>
+                <div className={styles.objText}>{o.text}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
