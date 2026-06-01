@@ -1,79 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap');
+
 :root {
-  --color-primary: #1B4FD8;
-  --color-primary-dark: #1340B8;
-  --color-primary-light: #3B6EF0;
-  --color-accent: #FF6400;
-  --color-accent-light: #FF8533;
-  --color-dark: #0F172A;
-  --color-text: #1E293B;
-  --color-text-muted: #64748B;
-  --color-bg: #FFFFFF;
-  --color-bg-subtle: #F8FAFF;
-  --color-border: #E2E8F0;
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
-  --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+  --magenta: #E6007E;
+  --magenta-soft: #FF3DA0;
+  --violeta: #6A2C91;
+  --violeta-dark: #2D0F45;
+  --naranja: #FF7A00;
+  --tinta: #14081F;
+  --crema: #FBF7FC;
+  --gris: #F2ECF6;
+  --texto: #6B5B78;
+  --blanco: #FFFFFF;
 }
 
-html,
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-sans);
-  color: var(--color-text);
-  background: var(--color-bg);
-  scroll-behavior: smooth;
+  font-family: 'Outfit', sans-serif;
+  background: var(--blanco);
+  color: var(--tinta);
+  overflow-x: hidden;
 }
 
-* {
-  box-sizing: border-box;
-}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+p { margin: 0; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-p {
-  margin: 0;
-  line-height: 1.7;
-}
-
-button {
-  cursor: pointer;
-  font-family: var(--font-sans);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.section-label {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  background: rgba(27, 79, 216, 0.08);
-  padding: 6px 14px;
-  border-radius: 100px;
-  margin-bottom: 16px;
-}
+.container { max-width: 1120px; margin: 0 auto; }

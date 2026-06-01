@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Socialab | Innovación Social en América Latina</title>
-        <meta name="description" content="Socialab es la plataforma líder en innovación social en LATAM. Aceleramos startups, brindamos consultoría de innovación y construimos comunidad de impacto." />
+        <title>Mallplaza Impulsa — Ecosistema de innovación urbana</title>
+        <meta name="description" content="Mallplaza Impulsa: el laboratorio de las ciudades del futuro. Cada centro se convierte en un espacio vivo donde probar, escalar e implementar innovación." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />

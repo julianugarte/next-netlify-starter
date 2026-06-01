@@ -2,24 +2,17 @@ import styles from './Navbar.module.css'
 
 export default function Navbar() {
   return (
-    <nav className={styles.navbar}>
-      <div className={`container ${styles.inner}`}>
-        <a href="#inicio" className={styles.logo}>
-          <div className={styles.logoIcon}>S</div>
-          Socialab
-        </a>
-        <ul className={styles.nav}>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#contacto" className={styles.cta}>Contáctanos</a></li>
-        </ul>
-        <button className={styles.hamburger} aria-label="Abrir menú">
-          <span />
-          <span />
-          <span />
-        </button>
+    <nav className={styles.nav}>
+      <div className={styles.brand}>
+        Mallplaza <span>Impulsa</span>
       </div>
+      <ul className={styles.links}>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#componentes">Componentes</a></li>
+        <li><a href="#laboratorio">Laboratorio</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#alcance">Alcance</a></li>
+      </ul>
     </nav>
   )
 }
